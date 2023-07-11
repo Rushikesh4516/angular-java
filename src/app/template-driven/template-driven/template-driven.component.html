@@ -1,0 +1,50 @@
+<div class="container">
+    <h2>Registeration form</h2>
+
+    <form #userForm="ngForm"(ngSubmit)="formSubmitted(userForm)">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" required placeholder="Enter name"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" required placeholder="Enter email"></td>
+            </tr>
+            <tr>
+                <td>about</td>
+                <td><input type="text" name="about" required placeholder="Enter about"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" id="" name="Gender" ngModule value="Male">Male
+                <input type="radio" id="" name="Gender" ngModule value="feMale">feMale</td>
+            </tr>
+            <tr>
+                <td>city</td>
+                <td>
+                    <select>
+                        <option value="Luckow">Luckow</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="kanpur">kanpur</option>
+                        <option value="varanasi">varanasi</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="Submit">Submit</button>
+                    <button type="Reset">Reset</button>
+                </td>
+            </tr>
+           
+        </table>
+        <div>
+            <h3>Forms Details</h3>
+            <p>value:{{userForm.value |json}}</p>
+            <p>value:{{userForm.dirty}}</p>
+            <p>value:{{userForm.valid}}</p>
+        </div>
+      
+    </form>
+</div>
